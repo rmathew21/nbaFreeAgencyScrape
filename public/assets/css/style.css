@@ -5,8 +5,10 @@ html {
 
 body {
     margin-bottom: 80px;
-    background-image: url("/public/assets/images/nba-park.jpg");
+    background-image: url(../images/porzingas.jpg);
 }
+
+
 
 .footer {
     position: absolute;
@@ -40,8 +42,8 @@ body {
 }
 
 .jumbotron .background-image {
+    background-image: url(../images/porzingas.jpg);
     height: 100%;
-    background-image: url("/public/assets/images/porzingas.jpg");
     background-size: cover;
 }
 
