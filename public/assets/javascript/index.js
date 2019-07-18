@@ -21,7 +21,7 @@ $(document).ready(function() {
     function renderArticles(articles) {
         const articlePanels = [];
 
-        for (let i = 0; i < articles.length; i++) {
+        for (var i = 0; i < articles.length; i++) {
             articlePanels.push(createPanel(articles[i]));
         }
         articleContainer.append(articlePanels);
@@ -82,10 +82,14 @@ $(document).ready(function() {
     }
 
     function handleArticleScrape() {
-        $get("/api/fetch")
-        .then(function(data) {
-            initPage();
-            bootbox.alert("<h3 class='text-center m-top-80'>" + data.message + "<h3>");
-        });
+        console.log("clicky click")
+        $.get("/api/fetch", function(data) {
+            console.log(data)
+        })
+        // .done(function(data) {
+        //     initPage();
+        //     console.log(data)
+        //     bootbox.alert("<h3 class='text-center m-top-80'>" + data.message + "<h3>");
+        // });
     }
 });

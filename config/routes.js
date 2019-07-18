@@ -26,7 +26,7 @@ module.exports = function(router) {
         });
     });
     router.get("/api/headlines", function(req, res) {
-        const query = {};
+        let query = {};
         if(req.query.saved) {
             query = req.query;
         }

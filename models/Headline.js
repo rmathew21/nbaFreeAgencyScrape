@@ -10,7 +10,7 @@ const headlineSchema = new Schema({
     },
     summary: {
         type: String,
-        required: true
+        required: false
     },
     date: String,
     saved: {
