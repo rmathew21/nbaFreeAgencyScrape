@@ -10,9 +10,10 @@ module.exports = {
             for (let i=0; i < articles.length; i++) {
                 articles[i].date = makeDate();
                 articles[i].saved = false;
+                Headline.create (articles[i]);
             }
 
-            Headline.collection.insertMany(articles, {ordered:false}, function(err, docs){
+            Headline.insertMany(articles, {ordered:false}, function(err, docs){
                 cb(err, docs);
             });
         });

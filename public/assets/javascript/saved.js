@@ -67,7 +67,7 @@ $(document).ready(function() {
 
     function renderNotesList(data) {
         const notesToRender = [];
-        const currentNote;
+        let currentNote;
         if (!data.notes.length) {
             currentNote = [
                 "<li class='list-group-item'>",
@@ -133,7 +133,7 @@ $(document).ready(function() {
     }
 
     function handleNoteSave() {
-        const noteData;
+        let noteData;
         const newNote = $(".bootbox-body textarea").val().trim();
         if (newNote) {
             noteData = {

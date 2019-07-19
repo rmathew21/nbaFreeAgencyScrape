@@ -82,7 +82,7 @@ $(document).ready(function() {
     }
 
     function handleArticleScrape() {
-        console.log("clicky click")
+        // console.log("clicky click")
         $.get("/api/fetch", function(data) {
             console.log(data)
         })

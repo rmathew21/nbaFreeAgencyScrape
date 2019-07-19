@@ -15,7 +15,7 @@ module.exports = function(router) {
         headlinesController.fetch(function(err, docs) {
             if (!docs || docs.insertedCount === 0) {
                 res.json({
-                    message: "No new articles today. Check back tomorrow!"
+                    message: "No new articles yet. Come back later!"
                 });
             }
             else {
